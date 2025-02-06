@@ -5,6 +5,13 @@ const mongoose = require('mongoose')
 const app = express()
 const SERVER_PORT = 3000
 
+const DB_NAME=''
+const DB_USERNAME='akeen'
+const DB_PASSWORD='akeen'
+const CLUSTER_ID = '31yoe'
+const DB_CONNECTION = `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@gbc-full-stack.${CLUSTER_ID}.mongodb.net/${DB_NAME}?retryWrites=true&w=majority&appName=GBC-full-stack`
+mongoose.connect(DB_CONNECTION,)
+
 const server = app.listen(SERVER_PORT, () => {
     console.log("Chat Room running on http://localhost:3000")
 })
